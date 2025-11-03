@@ -5,6 +5,7 @@
     "pages/ScrollPage",
     "pages/ScrollerExample",
     "pages/StackExample",
-    "pages/ListExample"
+    "pages/ListExample",
+    "pages/StackAlignContent"
   ]
 }
