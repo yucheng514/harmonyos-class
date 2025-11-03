@@ -4,6 +4,7 @@
     "pages/SliderPage",
     "pages/ScrollPage",
     "pages/ScrollerExample",
-    "pages/StackExample"
+    "pages/StackExample",
+    "pages/ListExample"
   ]
 }
