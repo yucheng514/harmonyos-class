@@ -44,7 +44,8 @@ struct ScrollPage {
     .width('100%')
     .height('100%')
     .onAreaChange((old: Area, newArea: Area) => {
-      this.middleHeight = (newArea.height as number) - 100;
+      // this.middleHeight = (newArea.height as number) - 100;
+      this.middleHeight = Number(newArea.height) - 100;
     })
   }
 }

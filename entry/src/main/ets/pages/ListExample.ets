@@ -1,3 +1,7 @@
+interface GroupItem {
+    letter: string
+    names: string[]
+}
 // 构建组标题
 @Builder
 function  builder(title: string) {
@@ -13,53 +17,40 @@ function  builder(title: string) {
 @Entry
 @Component
 struct ListGroupExample {
+    scroller: Scroller = new Scroller()
+    groupData: GroupItem[]  = [
+        { letter: 'A', names: ['Alice', 'Aaron'] },
+        { letter: 'B', names: ['Ben', 'Bella'] },
+        { letter: 'C', names: ['Chris', 'Cindy'] },
+        { letter: 'D', names: ['David', 'Diana'] },
+        { letter: 'E', names: ['Evan', 'Ella'] },
+        { letter: 'F', names: ['Frank', 'Fiona'] },
+        { letter: 'G', names: ['George', 'Grace'] }
+    ]
     build() {
-        List({ space: 20 }) { // space: 每个列表项之间的间距
-            // 第一组：A类联系人
-            ListItemGroup({ header: builder('A类联系人')  ,footer: builder('添加')}) {
-                ListItem() {
-                    Text('Alice')
-                        .fontSize(20)
-                        .padding(12)
+        List({ space: 30, initialIndex: 1, scroller: this.scroller}) {
+            ForEach(this.groupData,(item:GroupItem, index)=>{
+                ListItemGroup({ header: builder(`${item.letter}类`), footer: builder('添加') }) {
+                    ForEach(item.names, (name:string) =>{
+                        ListItem() {
+                            Text('' + name)
+                                .fontSize(20)
+                                .padding(12)
+                        }.backgroundColor('#ffd679c6').width('100%')
+                    })
                 }
-                ListItem() {
-                    Text('Aaron')
-                        .fontSize(20)
-                        .padding(12)
-                }
-            }
+            })
 
-            // 第二组：B类联系人
-            ListItemGroup({ header: builder('B类联系人') ,footer: builder('添加')}) {
-                ListItem() {
-                    Text('Ben')
-                        .fontSize(20)
-                        .padding(12)
-                }
-                ListItem() {
-                    Text('Bella')
-                        .fontSize(20)
-                        .padding(12)
-                }
-            }
-
-            // 第三组：C类联系人
-            ListItemGroup({ header: builder('C类联系人') ,footer: builder('添加') }) {
-                ListItem() {
-                    Text('Chris')
-                        .fontSize(20)
-                        .padding(12)
-                }
-                ListItem() {
-                    Text('Cindy')
-                        .fontSize(20)
-                        .padding(12)
-                }
-            }
         }
         .listDirection(Axis.Vertical)
         .divider({ color: '#ddd', strokeWidth: 1 }) // 每项之间的分割线
         .scrollBar(BarState.On) // 显示滚动条
+        .gesture(
+            TapGesture({ count: 2 })
+                .onAction(() => {
+                    this.scroller.scrollEdge(Edge.Top)
+                })
+        )
     }
 
 

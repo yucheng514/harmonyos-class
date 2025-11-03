@@ -1,16 +1,21 @@
 @Entry
 @Component
 struct ListPage {
+  scroller: Scroller = new Scroller()
   build() {
     Row() {
       Column() {
         Text('页面标题')
           .fontSize(24)
           .fontWeight(FontWeight.Bold)
-        List({ space: 20 }) {
-          ForEach(new Array(8).fill(1), (item:number, index) => {
+          .onClick(()=>{
+            this.scroller.scrollEdge(Edge.Top)
+          })
+        List({ space: 20, initialIndex: 7, scroller: this.scroller}) {
+          ForEach(new Array(20).fill(1), (item:number, index) => {
             ListItem(){
               Text('' + ++index)
+              // Text(`${index + 1}`)
                 .width('100%')
                 .height(100)
                 .backgroundColor(Color.Gray)
