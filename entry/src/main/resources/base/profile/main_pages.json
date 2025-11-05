@@ -6,6 +6,7 @@
     "pages/ScrollerExample",
     "pages/StackExample",
     "pages/ListExample",
-    "pages/StackAlignContent"
+    "pages/StackAlignContent",
+    "pages/TextInputExample"
   ]
 }
