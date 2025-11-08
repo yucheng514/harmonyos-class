@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+</head>
+
+<body>
+    <!-- flex 容器 -->
+    <div class="flex-container">
+
+
+        <!-- div 的 display 预设是 block，所以每个 box 各占一行 -->
+        <!-- flex item: flex 项目 -->
+        <div class="box A">A</div>
+        <div class="box B">B</div>
+        <div class="box C">C</div>
+        <div class="box D">D</div>
+        <div class="box E">E</div>
+
+        <!-- <div class="box A">A</div>
+        <div class="box B">B</div>
+        <div class="box C">C</div>
+        <div class="box D">D</div>
+        <div class="box E">E</div> -->
+
+<!-- 
+        <div class="box F">F</div>
+        <div class="box G">G</div>
+        <div class="box H">H</div> -->
+    </div>
+
+
+
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: darkgray;
+            /* flex-direction: 
+            row(默认), column, row-reverse, column-reverse */
+            /* direction 设置的方向即为主轴， */
+            flex-direction: row;
+
+            /* justify-content & align-items: 
+            设定主轴 & 交叉轴的排序方向。
+            有 center、flex-start、flex-end */
+            /* 方向是由 flex-direction 的设定值而改变，
+            所以不能用 top left right bottom 这些字段来命名*/
+            height: 400px;
+            justify-content: center;
+            align-items: center;
+
+            /* flex-wrap: 设定flex-items是否分行。有 nowrap、wrap */
+            /* items 变为10个，宽高变成120px */
+            /* flex-wrap: wrap; */
+
+            /* flex-flow = flex-direction + flex-wrap */
+
+            /* align-content: 当 flex-wrap为 wrap 并且有多于一行的 flex-items 时，
+            设定行与行之间的对齐方式。
+            有flex-start、flex-end、center、
+            space-around（左右都有相同的空间隔开）类似flex-item设置了padding、
+            space-evenly（之间有相同的间距）、
+            space-between（之间有相同间距，但是取消最左和最右的空间）。 */
+            /* align-content: space-between; */
+        }
+
+        .box {
+            width: 60px;
+            height: 60px;
+            /* width: 120px;
+            height: 120px; */
+            flex-basis: 100px;
+            flex-basis: auto;
+
+            background-color: #eee;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 4px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, .18);
+            font-size: 2em;
+        }
+
+
+        /* order: 调整 flex-items 的排序位置，预设值为0，
+        根据 order 由小到大排列。
+        注意：flex-items 在 HTML 内的位置并不代表最终显示的位置，
+        因为 order 可以随意将个别 flex-item 的位置改变。 */
+
+        /* align-self: 用于覆写 flex-container 的 align-items 设定。
+        改变flex-item在交叉轴上的位置 */
+
+
+        /* flex-basis: 设定 flex-item 主轴方向上的大小。
+        row 时设定宽度，column 时设置高度
+        在设定 flex-basis 之后，原有的宽度或者高度设定就会失效，
+        改为按照 flex-basis 的设定值去计算。设定为 0 则等同于 width 是 0 的效果，
+        只要容器本身没有 overflow:hidden 的设定，即等于它的大小取决于内容的大小，item 被内容撑开，内容有多少item就有多大。
+        设定为 auto 则代表按照本身原有宽度或者高度的大小去计算 */
+
+        /* .A {
+            order: 1;
+            align-self: flex-end;
+        } */
+
+
+        /* flex-grow: 当 flex-container 主轴方向有剩余空间的时候，
+        flex-item 沿主轴方向扩大的设定。
+        设定为数值，是 flex-item 占几份的意思，分母是剩余空间的大小；
+        0表示保持原有的大小不扩大。 */
+        /* 用三个item演示，容器宽度300px */
+        /* 三个 box 各占一份 */
+
+        /* .flex-container{
+            width: 300px;
+            justify-content: flex-start;
+        }
+        .box {
+            flex-grow: 1;
+        }
+        .F {
+            flex-grow: 3;
+        }
+        .G {
+            flex-grow: 0;
+        } */
+
+
+        /* flex-shrink: 与 flex-grow 相反，
+        是指 flex-item 主轴方向的大小总和超出了 flex-container 的时候，
+        flex-item 沿主轴方向怎样缩小的设定。
+        设定为数值，表示各自分担几份被缩小的空间，分母是超出空间的大小；0表示不缩小。 */
+        /* flex = ( flex-grow + flex-shrink + flex-basis )*/
+        /* flex: 0, 0, auto */
+        /* .flex-container {
+            width: 180px;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+
+        .box {
+            width: 90px;
+            flex-shrink: 1;
+        }
+
+        .F {
+            flex-shrink: 0;
+        }
+
+        .G {
+            flex-shrink: 2;
+        }
+
+        .H {
+            flex-shrink: 1;
+        } */
+
+
+        .A {
+            background-color: #6dd9bf;
+        }
+
+        .B {
+            background-color: #50a18e;
+        }
+
+        .C {
+            background-color: #f2d680;
+        }
+
+        .D {
+            background-color: #f2916D;
+        }
+
+        .E {
+            background-color: #f26e50;
+        }
+
+        .F {
+            background-color: aquamarine;
+        }
+
+        .G {
+            background-color: aqua;
+        }
+
+        .H {
+            background-color: burlywood;
+        }
+    </style>
+</body>
+
+</html>

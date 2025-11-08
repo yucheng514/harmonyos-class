@@ -2,7 +2,9 @@
 @Component
 struct FlexPage {
   build() {
-    Flex({ wrap: FlexWrap.Wrap, justifyContent: FlexAlign.SpaceEvenly }) {
+    Flex({ wrap: FlexWrap.Wrap,
+      justifyContent: FlexAlign.SpaceEvenly
+    }) {
       Column()
         .width('30%')
         .height(300)

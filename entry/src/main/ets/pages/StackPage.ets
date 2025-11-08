@@ -18,7 +18,10 @@ struct StackPage {
       }
       .width('100%')
       .height('100%')
-      Flex({ justifyContent: FlexAlign.SpaceEvenly, alignItems: ItemAlign.Center }) {
+      Flex({
+        justifyContent: FlexAlign.SpaceEvenly,
+        alignItems: ItemAlign.Center
+      }) {
         Text('联系人').fontSize(16)
         Text('设置').fontSize(16)
         Text('短信').fontSize(16)
