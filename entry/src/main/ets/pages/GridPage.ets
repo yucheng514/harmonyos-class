@@ -20,6 +20,8 @@ struct GridPage {
     .padding(10)
   }
 }
+
+@Preview
 @Component
 struct GridItemCase {
   build() {

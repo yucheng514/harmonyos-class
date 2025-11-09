@@ -9,6 +9,7 @@
     "pages/StackAlignContent",
     "pages/TextInputExample",
     "pages/FlexExample",
-    "pages/GridExample"
+    "pages/GridExample",
+    "pages/RowPage"
   ]
 }
