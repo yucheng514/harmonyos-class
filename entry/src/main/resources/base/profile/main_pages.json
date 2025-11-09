@@ -8,6 +8,7 @@
     "pages/ListExample",
     "pages/StackAlignContent",
     "pages/TextInputExample",
-    "pages/FlexExample"
+    "pages/FlexExample",
+    "pages/GridExample"
   ]
 }
