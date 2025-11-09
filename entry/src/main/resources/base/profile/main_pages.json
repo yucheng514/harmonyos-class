@@ -10,6 +10,7 @@
     "pages/TextInputExample",
     "pages/FlexExample",
     "pages/GridExample",
-    "pages/RowPage"
+    "pages/RowPage",
+    "pages/FlexPractice"
   ]
 }
