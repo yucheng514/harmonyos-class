@@ -1,16 +1,16 @@
 {
   "src": [
-    "pages/Index",
-    "pages/SliderPage",
-    "pages/ScrollPage",
-    "pages/ScrollerExample",
-    "pages/StackExample",
-    "pages/ListExample",
-    "pages/StackAlignContent",
-    "pages/TextInputExample",
-    "pages/FlexExample",
-    "pages/GridExample",
-    "pages/RowPage",
-    "pages/FlexPractice"
+    "pages/ArkUI/Index",
+    "pages/ArkUI/SliderPage",
+    "pages/ArkUI/ScrollPage",
+    "pages/ArkUI/ScrollerExample",
+    "pages/ArkUI/StackExample",
+    "pages/ArkUI/ListExample",
+    "pages/ArkUI/StackAlignContent",
+    "pages/ArkUI/TextInputExample",
+    "pages/ArkUI/FlexExample",
+    "pages/ArkUI/GridExample",
+    "pages/ArkUI/RowPage",
+    "pages/ArkUI/FlexPractice"
   ]
 }

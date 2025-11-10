@@ -38,5 +38,13 @@ struct FlexCard {
     .backgroundColor('#F8F8F8')
     .borderRadius(16)
     .shadow({ radius: 30, color: '#D0D0D0' })
+    .stateStyles({
+      normal: {
+        .backgroundColor('#F8F8F8')
+      },
+      pressed: {
+        .backgroundColor('#ccc')
+      }
+    })
   }
 }
