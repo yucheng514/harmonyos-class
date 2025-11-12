@@ -28,7 +28,8 @@ struct StackButtonExample {
         .borderRadius(30)
         .margin(20)
         .onClick(() => {
-          this.scroller.scrollTo({ xOffset: 0, yOffset: 0 })
+          this.scroller.scrollEdge(Edge.Top)
+          // this.scroller.scrollTo({ xOffset: 0, yOffset: 0 })
         })
     }
     .width('100%')
