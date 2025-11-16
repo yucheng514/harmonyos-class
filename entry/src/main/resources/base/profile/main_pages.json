@@ -12,8 +12,9 @@
     "pages/ArkUI/GridExample",
     "pages/ArkUI/RowPage",
     "pages/ArkUI/FlexPractice",
-    "pages/ArkUI/ForEachExample",
-    "pages/ArkUI/KeyGeneratorExample",
-    "pages/ArkUI/LoginPage"
+    "pages/Chap5/ForEachExample",
+    "pages/Chap5/KeyGeneratorExample",
+    "pages/ArkUI/LoginPage",
+    "pages/ArkUI/StateStylesExample"
   ]
 }
