@@ -52,7 +52,7 @@ struct FlexCard {
       Text('Grid 布局')
       Grid() {
         GridItem(){
-          Image('https://developer.huawei.com/consumer/cn/personalcenter/assets/images/banner/default-img.svg')
+          Image($r('app.media.avatar'))
             .width(60)
             .height(60)
             .borderRadius(30)
