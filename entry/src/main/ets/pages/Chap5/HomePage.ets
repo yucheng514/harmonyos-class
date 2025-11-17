@@ -8,7 +8,8 @@ struct HomePage {
     Column() {
       HomeHeader()
       HomeMain()
-        .layoutWeight(1)
+        // .layoutWeight(1)
+        .flexGrow(1)
         .backgroundColor('#ccc')
       HomeFooter()
     }
