@@ -15,6 +15,7 @@
     "pages/Chap5/ForEachExample",
     "pages/Chap5/KeyGeneratorExample",
     "pages/ArkUI/LoginPage",
-    "pages/ArkUI/StateStylesExample"
+    "pages/ArkUI/StateStylesExample",
+    "pages/Chap5/ImportExample"
   ]
 }
