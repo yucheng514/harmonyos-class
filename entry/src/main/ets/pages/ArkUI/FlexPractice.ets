@@ -90,6 +90,7 @@ struct FlexCard {
         .rowStart(2)
       }
       .columnsTemplate('230px 1fr') // 第一列头像宽度固定，第二列自适应
+      // .columnsTemplate(`${vp2px(60)} 1fr`) // 第一列头像宽度固定，第二列自适应
       .rowsTemplate('1fr 1fr 1fr') // 三行分别放姓名、学号、简介
       .width('85%')
       .height(100)
