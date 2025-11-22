@@ -1,4 +1,6 @@
-import { promptAction } from '@kit.ArkUI';
+import { PromptAction, UIContext } from '@kit.ArkUI';
+let promptAction: PromptAction = new UIContext().getPromptAction();
+
 @Extend(Button)
 function PayButton(type: 'alipay' | 'wechat') {
   .type(ButtonType.Normal)
