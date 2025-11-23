@@ -7,11 +7,11 @@ interface ICardItem {
 struct BuilderPage2 {
   @State area: string = '西直门';
   @Builder
-  getCellContent($$: ICardItem) {
+  getCellContent(iCardItem: ICardItem) {
     Row() {
       Row() {
-        Text($$.leftValue)
-        Text($$.rightValue)
+        Text(iCardItem.leftValue)
+        Text(iCardItem.rightValue)
       }
       .width('100%')
       .justifyContent(FlexAlign.SpaceBetween)

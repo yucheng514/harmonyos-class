@@ -1,6 +1,6 @@
 import { promptAction } from '@kit.ArkUI';
 @Styles
-function payStyle () {
+function payStyle1() {
   .width('100%')
   .height(50)
   .borderRadius(4)
@@ -13,7 +13,7 @@ function payStyle () {
 @Component
 struct StylesPage {
   @Styles
-  payStyle() {
+  payStyle2() {
     .width('100%')
     .height(50)
     .borderRadius(4)
@@ -24,27 +24,20 @@ struct StylesPage {
   }
   build() {
     Column({ space: 20 }) {
-      Row() {
-        // Button('微信支付', { type: ButtonType.Normal })
-        Button('支付宝支付', { type: ButtonType.Normal })
-          .payStyle()
-          .fontColor(Color.White)
-      }
-      .padding(10)
-      Row() {
-        // Button('微信支付', { type: ButtonType.Normal })
-        Button('支付宝支付', { type: ButtonType.Normal })
-          .payStyle()
-          .fontColor(Color.White)
-      }
-      .padding(10)
-      Row() {
-        // Button('微信支付', { type: ButtonType.Normal })
-        Button('支付宝支付', { type: ButtonType.Normal })
-          .payStyle()
-          .fontColor(Color.White)
-      }
-      .padding(10)
+      ForEach(new Array(3).fill(1), (item:number) => {
+        Row() {
+          Button('微信支付', { type: ButtonType.Normal })
+            .payStyle1()
+            .fontColor(Color.White)
+        }.padding(10)
+      })
+      ForEach(new Array(3).fill(1), (item:number) => {
+        Row() {
+          Button('支付宝支付', { type: ButtonType.Normal })
+            .payStyle2()
+            .fontColor(Color.White)
+        }.padding(10)
+      })
     }
   }
 }
