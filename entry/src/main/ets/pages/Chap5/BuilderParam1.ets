@@ -25,6 +25,10 @@ struct BuilderParam1 {
           this.getContent('父组件');
         }
       })
-    }
+      // ChildComponent1()
+      // ChildComponent1(){
+      //     this.getContent('父组件2');
+      // }
+    }.padding(20)
   }
 }

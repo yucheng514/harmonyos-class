@@ -25,7 +25,11 @@ struct BuilderParam3 {
   build() {
     Column({ space: 20 }) {
       BuilderParamPanel({ panelHeight: 200, panelColor: Color.Pink }) {
-        Flex({ direction: FlexDirection.Row, wrap: FlexWrap.Wrap, justifyContent: FlexAlign.Center }) {
+        Flex({
+          direction: FlexDirection.Row,
+          wrap: FlexWrap.Wrap,
+          justifyContent: FlexAlign.Center
+        }) {
           ForEach([1, 2, 3, 4, 5, 6], (item: number) => {
             Button('测试' + item)
               .margin({ left: 10, top: 10 })
