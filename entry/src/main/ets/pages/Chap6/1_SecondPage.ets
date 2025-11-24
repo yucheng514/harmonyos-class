@@ -12,34 +12,47 @@ struct SecondPage {
       Button('获取参数')
         .margin({ top: 50 })
         .onClick(() => {
-          const params = router.getParams() as Person;
+          // const params = router.getParams() as Person;
+          const params = this.getUIContext().getRouter().getParams() as Person;
           if (params) {
-            AlertDialog.show({
-              message: `${params.id}`
-            });
+            // AlertDialog.show({
+            //   message: `1${params.id}`
+            // });
+            this.getUIContext().showAlertDialog({
+              message: `获得参数：${params.id}`
+            })
           }
         })
-      Button('返回上一页')
+      Button('返回上一页(默认)')
         .margin({ top: 50 })
         .onClick(() => {
-          router.back({
-            url: 'pages/Chap6/FirstPage',
+          // router.back({
+          this.getUIContext().getRouter().back();
+        })
+      Button('返回上一页(带参数)')
+        .onClick(() => {
+          // router.back({
+          this.getUIContext().getRouter().back({
+            url: 'pages/Chap6/1_FirstPage',
             params: { name: '张三' }
           });
         })
 
       Button('退出1')
+        .margin({ top: 50 })
         .onClick(() => {
-          router.showAlertBeforeBackPage({
+          // router.showAlertBeforeBackPage({
+          this.getUIContext().getRouter().showAlertBeforeBackPage({
             message: '确认要放弃付款吗？'
           });
-          router.back();
+          // router.back();
+          this.getUIContext().getRouter().back();
         })
 
       Button('退出2')
-        .margin({ top: 50 })
         .onClick(() => {
-          promptAction.showDialog({
+          // promptAction.showDialog({
+          this.getUIContext().getPromptAction().showDialog({
             message: '确认要放弃付款吗？',
             buttons: [
               { text: '取消', color: '#F00' },
@@ -50,7 +63,8 @@ struct SecondPage {
               console.log('用户取消操作');
             } else if (result.index == 1) {
               console.log('用户确认操作');
-              router.back();
+              // router.back();
+              this.getUIContext().getRouter().back();
             }
           })
         })
