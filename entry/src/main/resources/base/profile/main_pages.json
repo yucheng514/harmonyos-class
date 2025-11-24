@@ -1,6 +1,6 @@
 {
   "src": [
-    "pages/ArkUI/Index",
+    "pages/Index",
     "pages/ArkUI/SliderPage",
     "pages/ArkUI/ScrollPage",
     "pages/ArkUI/ScrollerExample",
@@ -16,6 +16,9 @@
     "pages/Chap5/KeyGeneratorExample",
     "pages/ArkUI/LoginPage",
     "pages/ArkUI/StateStylesExample",
-    "pages/Chap5/ImportExample"
+    "pages/Chap5/ImportExample",
+    "pages/Chap6/FirstPage",
+    "pages/Chap6/SecondPage",
+    "pages/Chap6/ModeRouter1"
   ]
 }
