@@ -9,6 +9,7 @@ struct ModeRouter1 {
           .fontSize(24)
           .fontWeight(FontWeight.Bold)
           .onClick(() => {
+            // this.getUIContext().getRouter().pushUrl({
             router.pushUrl({
               url: '@bundle:com.example.harmonyos_class/library/ets/pages/Index'
             });

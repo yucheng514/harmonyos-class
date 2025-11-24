@@ -17,8 +17,9 @@
     "pages/ArkUI/LoginPage",
     "pages/ArkUI/StateStylesExample",
     "pages/Chap5/ImportExample",
-    "pages/Chap6/FirstPage",
-    "pages/Chap6/SecondPage",
-    "pages/Chap6/ModeRouter1"
+    "pages/Chap6/1_FirstPage",
+    "pages/Chap6/1_SecondPage",
+    "pages/Chap6/ModeRouter1",
+    "pages/Chap6/ModeRouter2"
   ]
 }
