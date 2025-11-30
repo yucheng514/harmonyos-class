@@ -20,6 +20,8 @@
     "pages/Chap6/1_FirstPage",
     "pages/Chap6/1_SecondPage",
     "pages/Chap6/ModeRouter1",
-    "pages/Chap6/ModeRouter2"
+    "pages/Chap6/ModeRouter2",
+    "pages/Chap6/2_IndexPage",
+    "pages/Chap6/2_DetailPage"
   ]
 }

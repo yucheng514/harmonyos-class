@@ -38,7 +38,7 @@ struct SecondPage {
           });
         })
 
-      Button('退出1')
+      Button('返回上一页(showAlertBeforeBackPage)')
         .margin({ top: 50 })
         .onClick(() => {
           // router.showAlertBeforeBackPage({
@@ -49,7 +49,7 @@ struct SecondPage {
           this.getUIContext().getRouter().back();
         })
 
-      Button('退出2')
+      Button('返回上一页(promptAction.showDialog)')
         .onClick(() => {
           // promptAction.showDialog({
           this.getUIContext().getPromptAction().showDialog({
