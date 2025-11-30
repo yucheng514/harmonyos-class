@@ -1,5 +1,5 @@
-import { PromptAction, UIContext, } from '@kit.ArkUI';
-let promptAction: PromptAction = new UIContext().getPromptAction();
+import { PromptAction, UIContext, promptAction } from '@kit.ArkUI';
+let promptAction1: PromptAction = new UIContext().getPromptAction();
 @Extend(Button)
 function PayButton(type: 'alipay' | 'wechat',uiContext: UIContext) {
   .type(ButtonType.Normal)
@@ -13,7 +13,8 @@ function PayButton(type: 'alipay' | 'wechat',uiContext: UIContext) {
     if(type === 'alipay') {
       uiContext.getPromptAction().showToast({ message: '支付宝支付成功' });
     } else {
-      promptAction.showToast({ message: '微信支付成功' });
+      // promptAction.showToast({ message: '微信支付成功' });
+      promptAction1.showToast({ message: '微信支付成功' });
     }
   })
 }
