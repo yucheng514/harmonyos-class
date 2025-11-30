@@ -6,12 +6,20 @@ struct NavigationDemo2 {
       .title('主页')
       .titleMode(NavigationTitleMode.Mini)
       .mode(NavigationMode.Stack)
-      .toolbarConfiguration([
-        { value: '首页', icon: 'resources/base/media/ic_public_home.svg', action: () => {} },
-        { value: '设置', icon: 'resources/base/media/ic_public_settings.svg', action: () => {} },
-        { value: '分类', icon: 'resources/base/media/ic_public_app.svg', action: () => {} },
-        { value: '收藏', icon: 'resources/base/media/ic_public_collect.svg', action: () => {} },
-        { value: '我的', icon: 'resources/base/media/ic_public_contacts.svg', action: () => {} }
+      .menus([
+        { value: '搜索', icon: $r('app.media.ic_public_search'), action: () => {} },
+        { value: '添加', icon: $r('app.media.ic_public_add'), action: () => {}} ,
+        { value: '编辑', icon: $r('app.media.ic_public_edit'), action: () => {} },
+        { value: '减少', icon: $r('app.media.ic_public_remove'), action: () => {} }
       ])
+      .toolbarConfiguration([
+        { value: '首页', icon: $r('app.media.ic_public_home'), action: () => {} },
+        { value: '设置', icon: $r('app.media.ic_public_settings'), action: () => {} },
+        { value: '分类', icon: $r('app.media.ic_public_app'), action: () => {} },
+        { value: '收藏', icon: $r('app.media.ic_public_collect'), action: () => {} },
+        { value: '我的', icon: $r('app.media.ic_public_contacts'), action: () => {} }
+      ])
+      // .hideNavBar(true)
+      // .hideToolBar(true)
   }
 }
