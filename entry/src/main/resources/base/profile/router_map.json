@@ -1,0 +1,7 @@
+{
+  "routerMap": [{
+    "name": "sub",
+    "pageSourceFile": "src/main/ets/pages/Chap6/3_NavSubPage.ets",
+    "buildFunction": "NavSubBuilder"
+  }]
+}

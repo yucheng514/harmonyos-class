@@ -6,11 +6,12 @@ interface Person {
 @Entry
 @Component
 struct SecondPage {
+  @State stackLen: number = 0;
+  @State currentPageInfo: string = '';
   build() {
     Column({ space: 20 }) {
       Text('第二页')
       Button('获取参数')
-        .margin({ top: 50 })
         .onClick(() => {
           // const params = router.getParams() as Person;
           const params = this.getUIContext().getRouter().getParams() as Person;
@@ -39,7 +40,6 @@ struct SecondPage {
         })
 
       Button('返回上一页(showAlertBeforeBackPage)')
-        .margin({ top: 50 })
         .onClick(() => {
           // router.showAlertBeforeBackPage({
           this.getUIContext().getRouter().showAlertBeforeBackPage({
@@ -68,8 +68,39 @@ struct SecondPage {
             }
           })
         })
+
+
+      // 3 & 4. getLength + getState：查看页面栈信息
+      Button('刷新页面栈信息（getLength + getState）')
+        .onClick(() => {
+          // 获取页面栈数量
+          const len = router.getLength();      // number
+          this.stackLen = Number(len)
+
+          // 获取当前页面状态信息
+          const state = router.getState();     // RouterState
+          this.currentPageInfo = JSON.stringify(state)
+        })
+
+      Text(`当前页面栈长度：${this.stackLen}`)
+        .fontSize(16)
+
+      Text(`当前页面状态：${this.currentPageInfo}`)
+        .fontSize(14)
+
+      // 5. clear：清空历史页面栈
+      Button('clear 清空历史页面栈，只保留当前页')
+        .onClick(() => {
+          router.clear();
+          // 再刷新一次看看效果
+          const len = router.getLength();
+          this.stackLen = Number(len)
+          const state = router.getState();
+          this.currentPageInfo = JSON.stringify(state)
+        })
     }
     .width('100%')
     .height('100%')
+
   }
 }
