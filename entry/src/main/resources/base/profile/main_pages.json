@@ -22,6 +22,10 @@
     "pages/Chap6/ModeRouter1",
     "pages/Chap6/ModeRouter2",
     "pages/Chap6/2_IndexPage",
-    "pages/Chap6/2_DetailPage"
+    "pages/Chap6/2_DetailPage",
+    "pages/Chap6/3_NavHomePage",
+    "pages/Chap6/3_NavSubPage",
+    "pages/Chap6/InterceptionPage",
+    "pages/Chap6/NavigationPage2"
   ]
 }
