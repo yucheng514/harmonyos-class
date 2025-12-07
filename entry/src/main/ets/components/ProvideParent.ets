@@ -5,7 +5,7 @@ export default struct ProvideParent {
   build() {
     Column({ space: 20 }) {
       Row({ space: 20 }) {
-        Text('父组件：' + this.num)
+        Text('Parent组件：' + this.num)
         Button('加1')
           .onClick(() => {
             this.num++;

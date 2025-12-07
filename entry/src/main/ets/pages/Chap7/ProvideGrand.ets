@@ -6,7 +6,7 @@ struct ProvideGrand {
   build() {
     Column({ space: 20 }) {
       Row({ space: 10 }) {
-        Text('爷爷组件：' + this.num)
+        Text('Grand组件：' + this.num)
         Button('加1')
           .onClick(() => {
             this.num++;
