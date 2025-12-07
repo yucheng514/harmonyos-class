@@ -1,4 +1,4 @@
-import { Goods } from '../models/Goods';
+import { Goods } from '../../models/Goods';
 @Entry
 @Component
 struct TrackPage {

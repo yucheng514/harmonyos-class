@@ -1,4 +1,4 @@
-import RequireChild from '../components/RequireChild';
+import RequireChild from '../../components/RequireChild';
 @Entry
 @Component
 struct RequirePage {

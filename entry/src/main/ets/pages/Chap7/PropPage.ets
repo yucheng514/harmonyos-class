@@ -1,4 +1,4 @@
-import PropChild from '../components/PropChild';
+import PropChild from '../../components/PropChild';
 @Entry
 @Component
 struct PropPage {

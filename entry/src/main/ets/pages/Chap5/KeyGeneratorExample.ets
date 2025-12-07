@@ -1,4 +1,4 @@
-import { User1 } from '../../model/User'
+import { User1 } from '../../models/User'
 @Entry
 @Component
 struct KeyGeneratorExample {

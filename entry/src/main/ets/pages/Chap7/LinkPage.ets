@@ -1,4 +1,4 @@
-import LinkChild from '../components/LinkChild';
+import LinkChild from '../../components/LinkChild';
 @Entry
 @Component
 struct LinkPage {

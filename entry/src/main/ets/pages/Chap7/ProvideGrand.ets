@@ -1,4 +1,4 @@
-import ProvideParent from '../components/ProvideParent';
+import ProvideParent from '../../components/ProvideParent';
 @Entry
 @Component
 struct ProvideGrand {

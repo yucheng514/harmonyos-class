@@ -1,5 +1,5 @@
-import { GoodsComment } from '../models/GoodsComment';
-import ObservedChild from '../components/ObservedChild';
+import { GoodsComment } from '../../models/GoodsComment';
+import ObservedChild from '../../components/ObservedChild';
 @Entry
 @Component
 struct ObservedPage {
