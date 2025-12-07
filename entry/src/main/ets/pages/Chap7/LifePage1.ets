@@ -22,7 +22,7 @@ struct LifePage1 {
           .fontWeight(FontWeight.Bold)
         Button('跳转下一页')
           .onClick(() => {
-            router.pushUrl({ url: 'pages/LifePage2' });
+            router.pushUrl({ url: 'pages/Chap7/LifePage2' });
           })
       }
       .width('100%')
