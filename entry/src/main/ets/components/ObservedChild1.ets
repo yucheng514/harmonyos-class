@@ -3,6 +3,7 @@ import CounterModel from '../models/ObservedModel'
 @Component
 export default struct ObservedChild1 {
     @ObjectLink model: CounterModel;
+    // @Prop
 
     build() {
         Column() {

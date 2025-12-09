@@ -3,5 +3,9 @@
     "name": "sub",
     "pageSourceFile": "src/main/ets/pages/Chap6/3_NavSubPage.ets",
     "buildFunction": "NavSubBuilder"
+  },{
+    "name": "NaviPage",
+    "pageSourceFile": "src/main/ets/pages/Chap6/NavigationPage3_Sub.ets",
+    "buildFunction": "NavSubBuilder1"
   }]
 }

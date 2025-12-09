@@ -28,6 +28,8 @@
     "pages/Chap6/InterceptionPage",
     "pages/Chap6/NavigationPage2",
     "pages/Chap7/LifePage1",
-    "pages/Chap7/LifePage2"
+    "pages/Chap7/LifePage2",
+    "pages/Chap6/NavigationPage3",
+    "pages/Chap7/ObservedPage1"
   ]
 }

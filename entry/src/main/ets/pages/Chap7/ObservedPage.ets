@@ -17,14 +17,37 @@ struct ObservedPage {
       date: '2024-3-16'
     })
   ];
+  @State comment:GoodsComment = new GoodsComment({
+    author: '小1李',
+    content: '《边淳朴人情与美好人性，传递出对纯真爱情的向往与赞美。',
+    like_count: 1810,
+    date: '2024-32-16'
+  })
   build() {
     List() {
       ForEach(this.commentList, (item: GoodsComment) => {
         ListItem() {
-          ObservedChild({ item: item })
+          Column(){
+            ObservedChild({ item: item })
+            Text(`Page:${item.like_count}`)
+            Button('add').onClick(()=>{
+              this.commentList.push(new GoodsComment({
+                author: '小1李',
+                content: '《边淳朴人情与美好人性，传递出对纯真爱情的向往与赞美。',
+                like_count: 1810,
+                date: '2024-32-16'
+              }))
+            })
+          }
         }
       })
+
+
     }
+    // Column(){
+    //   ObservedChild({item:this.comment})
+    //   Text(`Page:${this.comment.like_count}`)
+    // }
     .width('100%')
     .height('100%')
     .padding(20)
