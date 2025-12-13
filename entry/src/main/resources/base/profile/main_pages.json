@@ -30,6 +30,8 @@
     "pages/Chap7/LifePage1",
     "pages/Chap7/LifePage2",
     "pages/Chap6/NavigationPage3",
-    "pages/Chap7/ObservedPage1"
+    "pages/Chap7/ObservedPage1",
+    "pages/Chap8/SharePage1",
+    "pages/Chap8/SharePage2"
   ]
 }
