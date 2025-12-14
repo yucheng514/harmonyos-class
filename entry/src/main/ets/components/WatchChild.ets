@@ -9,7 +9,7 @@ export default struct WatchChild {
   build() {
     Row() {
       Column() {
-        Text('子组件' + this.num)
+        Text('子组件' + this.num + this.message)
         Button('加1')
           .onClick(() => {
             this.num++;
