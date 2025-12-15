@@ -30,7 +30,6 @@ struct RcpPage {
   }
   build() {
     Column() {
-      Text('123')
       Text('姓名：' + this.student.name)
       Text('年龄：' + this.student.age)
     }
