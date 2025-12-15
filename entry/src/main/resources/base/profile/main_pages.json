@@ -34,6 +34,7 @@
     "pages/Chap7/AppStoragePage",
     "pages/Chap8/SharePage1",
     "pages/Chap8/SharePage2",
-    "pages/Chap7/WatchPage2"
+    "pages/Chap7/WatchPage2",
+    "pages/Chap8/RcpPage"
   ]
 }

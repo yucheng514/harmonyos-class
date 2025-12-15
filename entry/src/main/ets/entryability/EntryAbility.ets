@@ -28,8 +28,9 @@ export default class EntryAbility extends UIAbility {
         // windowStage.loadContent('pages/Chap6/ModeRouter2', (err) => {
         // windowStage.loadContent('pages/Chap6/3_NavHomePage', (err) => {
         // windowStage.loadContent('pages/Chap6/NavigationPage3', (err) => {
-        windowStage.loadContent('pages/Chap7/AppStoragePage', (err) => {
-            // PersistentStorage.PersistProp('name','xiaoming2')
+        // windowStage.loadContent('pages/Chap7/AppStoragePage', (err) => {
+        windowStage.loadContent('pages/Chap8/RcpPage.ets', (err) => {
+                // PersistentStorage.PersistProp('name','xiaoming2')
             if (err.code) {
                 hilog.error(DOMAIN, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
                 return;
