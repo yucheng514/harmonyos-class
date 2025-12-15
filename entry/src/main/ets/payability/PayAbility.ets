@@ -1,17 +1,15 @@
-import { AbilityConstant, ConfigurationConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
 
 const DOMAIN = 0x0000;
 
-export default class EntryAbility extends UIAbility {
+export default class PayAbility extends UIAbility {
     onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            this.context.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
-        } catch (err) {
-            hilog.error(DOMAIN, 'testTag', 'Failed to set colorMode. Cause: %{public}s', JSON.stringify(err));
+        hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onCreate');
+        if(want.parameters && want.parameters.order_id){
+            AppStorage.SetOrCreate('order_id',want.parameters.order_id)
         }
-        hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onCreate1');
     }
 
     onDestroy(): void {
@@ -21,17 +19,8 @@ export default class EntryAbility extends UIAbility {
     onWindowStageCreate(windowStage: window.WindowStage): void {
         // Main window is created, set main page for this ability
         hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-        AppStorage.SetOrCreate('name','xiaoming')
-        AppStorage.SetOrCreate('age',19)
-        // windowStage.loadContent('pages/Index', (err) => {
-        // windowStage.loadContent('pages/Chap6/ModeRouter1', (err) => {
-        // windowStage.loadContent('pages/Chap6/ModeRouter2', (err) => {
-        // windowStage.loadContent('pages/Chap6/3_NavHomePage', (err) => {
-        // windowStage.loadContent('pages/Chap6/NavigationPage3', (err) => {
-        // windowStage.loadContent('pages/Chap7/AppStoragePage', (err) => {
-        windowStage.loadContent('pages/Chap8/RcpPage', (err) => {
-        // windowStage.loadContent('pages/Chap7/MainPay', (err) => {
-                // PersistentStorage.PersistProp('name','xiaoming2')
+
+        windowStage.loadContent('pages/Chap7/PayIndex', (err) => {
             if (err.code) {
                 hilog.error(DOMAIN, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
                 return;

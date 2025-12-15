@@ -2,10 +2,8 @@ import { promptAction } from '@kit.ArkUI';
 @Entry
 @Component
 struct WatchCounterExample {
-
   @Watch('onCountChange')
   @State count: number = 0
-
   onCountChange() {
     if (this.count % 5 === 0) {
       promptAction.showToast({
@@ -13,7 +11,6 @@ struct WatchCounterExample {
       })
     }
   }
-
   build() {
     Column({ space: 20 }) {
       Text(`当前计数：${this.count}`)

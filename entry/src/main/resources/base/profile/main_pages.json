@@ -35,6 +35,8 @@
     "pages/Chap8/SharePage1",
     "pages/Chap8/SharePage2",
     "pages/Chap7/WatchPage2",
-    "pages/Chap8/RcpPage"
+    "pages/Chap8/RcpPage",
+    "pages/Chap7/MainPay",
+    "pages/Chap7/PayIndex"
   ]
 }
