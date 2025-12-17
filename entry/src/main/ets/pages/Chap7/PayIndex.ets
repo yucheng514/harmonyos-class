@@ -5,8 +5,10 @@ struct PayIndex {
   @StorageProp('order_id') order_id: Number = 0;
   build() {
     Row() {
-      Column() {
-        Text(this.order_id.toString())
+      Column({space: 10}) {
+        Text('PayAbility PayIndex.ets')
+
+        Text("order_id:" + this.order_id.toString())
         Button('开始支付')
           .onClick(() => {
             const context = getContext() as common.UIAbilityContext;
@@ -14,7 +16,7 @@ struct PayIndex {
               resultCode: 1,
               want: {
                 deviceId: '',
-                bundleName: 'com.example.myapplication',
+                bundleName: 'com.example.harmonyos_class',
                 abilityName: 'EntryAbility',
                 parameters: {
                   pay_result: true

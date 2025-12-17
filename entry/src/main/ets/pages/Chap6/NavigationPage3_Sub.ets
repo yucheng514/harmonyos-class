@@ -1,6 +1,5 @@
 interface Info { title: string, detail: string }
 function getPageInfo(name: string): Info {
-    console.log(name+'22')
     switch (name) {
         case 'rice':
             return { title: '米饭类菜谱', detail: '例子：蛋炒饭、咖喱饭、番茄牛腩饭……' }

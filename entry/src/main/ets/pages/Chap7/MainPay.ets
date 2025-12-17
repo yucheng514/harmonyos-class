@@ -5,7 +5,8 @@ struct MainPay {
   @State message: string = '';
   build() {
     Row() {
-      Column() {
+      Column({space: 10}) {
+        Text('EntryAbility MainPay.ets')
         Button('去支付')
           .onClick(async () =>  {
             const context = getContext() as common.UIAbilityContext;
@@ -19,7 +20,9 @@ struct MainPay {
             });
             this.message = JSON.stringify(result);
           })
-        Text(this.message)
+        if(this.message){
+          Text('Result:'+this.message)
+        }
       }
       .width('100%')
     }
