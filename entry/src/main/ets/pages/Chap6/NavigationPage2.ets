@@ -35,6 +35,7 @@ struct RecipeNavigationPage {
         .shadow({ radius: 6, color: Color.Gray, offsetX: 0, offsetY: 3 })
         .onClick(() => {
             this.pathStack.pushPathByName(name, null);
+            // this.pathStack.pushPath({name:name});
         })
     }
 

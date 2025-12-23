@@ -21,17 +21,18 @@ export default class EntryAbility extends UIAbility {
     onWindowStageCreate(windowStage: window.WindowStage): void {
         // Main window is created, set main page for this ability
         hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-        AppStorage.SetOrCreate('name','xiaoming')
-        AppStorage.SetOrCreate('age',19)
+        // AppStorage.SetOrCreate('name','xiaoming')
+        AppStorage.SetOrCreate('age',18)
         // windowStage.loadContent('pages/Index', (err) => {
         // windowStage.loadContent('pages/Chap6/ModeRouter1', (err) => {
         // windowStage.loadContent('pages/Chap6/ModeRouter2', (err) => {
         // windowStage.loadContent('pages/Chap6/3_NavHomePage', (err) => {
         // windowStage.loadContent('pages/Chap6/NavigationPage3', (err) => {
         // windowStage.loadContent('pages/Chap7/AppStoragePage', (err) => {
-        windowStage.loadContent('pages/Chap8/RcpPage', (err) => {
-        // windowStage.loadContent('pages/Chap7/MainPay', (err) => {
-                // PersistentStorage.PersistProp('name','xiaoming2')
+        // windowStage.loadContent('pages/Chap8/RcpPage', (err) => {
+        windowStage.loadContent('pages/Chap7/MainPay', (err) => {
+        //     PersistentStorage.DeleteProp('name')
+            PersistentStorage.PersistProp('name','小明2')
             if (err.code) {
                 hilog.error(DOMAIN, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
                 return;
