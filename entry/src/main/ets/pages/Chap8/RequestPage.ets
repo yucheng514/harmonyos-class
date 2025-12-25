@@ -1,3 +1,4 @@
+import { BusinessError } from '@ohos.base'
 import { http } from '@kit.NetworkKit';
 interface StudentType {
   name: string;
@@ -10,25 +11,21 @@ struct RequestPage {
   async aboutToAppear() {
     const httpRequest = http.createHttp();
     const baseUrl = 'http://172.28.80.18:3000';
+    // httpRequest.request(`${baseUrl}/student`,{
+    //   expectDataType: http.HttpDataType.OBJECT
+    // }).then(res => {
+    //   this.student = res.result as StudentType;
+    // }).catch((error: BusinessError)  => {
+    //   console.log(JSON.stringify(error))
+    // }).finally(() => {
+    //   httpRequest.destroy();
+    // })
     try {
       const res = await httpRequest.request(`${baseUrl}/student`, {
         expectDataType: http.HttpDataType.OBJECT
       });
       this.student = res.result as StudentType;
 
-      // const res = await httpRequest.request(`${baseUrl}/student`, {
-      //   extraData: { field: 'name' },
-      //   expectDataType: http.HttpDataType.OBJECT
-      // });
-      // console.log(res.result as string);		// 输出结果：小明
-
-      // const student: StudentType = { name: '小明', age: 18 };
-      // const res = await httpRequest.request(`${baseUrl}/student`, {
-      //   method: http.RequestMethod.POST,
-      //   header: { 'Content-Type': 'application/json' },
-      //   extraData: student
-      // });
-      // console.log('', res.result);
 
     } catch (e) {
       console.log('请求失败：', JSON.stringify(e));
