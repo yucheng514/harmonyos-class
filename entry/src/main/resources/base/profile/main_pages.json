@@ -37,6 +37,11 @@
     "pages/Chap7/WatchPage2",
     "pages/Chap8/RcpPage",
     "pages/Chap7/MainPay",
-    "pages/Chap7/PayIndex"
+    "pages/Chap7/PayIndex",
+    "pages/Exam/LoginPage1",
+    "pages/Exam/TagCloud",
+    "pages/Exam/MainPage",
+    "pages/Exam/CounterApp",
+    "pages/Exam/PageLife"
   ]
 }
